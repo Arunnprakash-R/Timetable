@@ -201,6 +201,21 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
+# Node / Next.js
+node_modules/
+.next/
+out/
+coverage/
+.turbo/
+*.tsbuildinfo
+
+# Environment
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+
 # Marimo
 marimo/_static/
 marimo/_lsp/

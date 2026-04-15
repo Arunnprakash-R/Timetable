@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 33% 98%;
+  --foreground: 224 38% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 38% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 38% 12%;
+  --primary: 224 76% 54%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 18% 94%;
+  --secondary-foreground: 224 38% 12%;
+  --muted: 220 18% 94%;
+  --muted-foreground: 215 16% 45%;
+  --accent: 195 92% 92%;
+  --accent-foreground: 224 38% 12%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 18% 86%;
+  --input: 220 18% 86%;
+  --ring: 224 76% 54%;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: 224 36% 8%;
+  --foreground: 210 40% 98%;
+  --card: 224 31% 12%;
+  --card-foreground: 210 40% 98%;
+  --popover: 224 31% 12%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 222 89% 66%;
+  --primary-foreground: 224 36% 8%;
+  --secondary: 224 25% 18%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 224 25% 18%;
+  --muted-foreground: 215 20% 70%;
+  --accent: 194 85% 20%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 224 25% 20%;
+  --input: 224 25% 20%;
+  --ring: 222 89% 66%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.14), transparent 28%),
+    radial-gradient(circle at top right, rgba(16, 185, 129, 0.12), transparent 24%),
+    linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%);
+  color: hsl(var(--foreground));
+}
+
+.glass-panel {
+  background: color-mix(in srgb, hsl(var(--card)) 82%, transparent);
+  backdrop-filter: blur(18px);
+  border: 1px solid color-mix(in srgb, hsl(var(--border)) 80%, transparent);
+}
+
+.timeline-grid {
+  grid-template-columns: 120px repeat(6, minmax(0, 1fr));
+}
+
+.offline-banner {
+  background: linear-gradient(90deg, rgba(14, 165, 233, 0.18), rgba(59, 130, 246, 0.06));
+}
